@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {HomeComponent} from './views/home/home.component';
-import {ProductCrudComponent} from  './views/product-crud/product-crud.component';
+import { HomeComponent } from './views/home/home.component';
+import { ProductCrudComponent } from './views/product-crud/product-crud.component';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 import { FormaPagamentoCrudComponent } from './views/forma-pagamento-crud/forma-pagamento-crud.component';
+import { FormaPagamentoCreateComponent } from './components/formaPagamento/forma-pagamento-create/forma-pagamento-create.component';
+import { FormaPagamentoDeleteComponent } from './components/formaPagamento/forma-pagamento-delete/forma-pagamento-delete.component';
+import { FormaPagamentoUpdateComponent } from './components/formaPagamento/forma-pagamento-update/forma-pagamento-update.component';
 
-//configuração para rotear entre as paginas na home
+// Configuração das rotas
 const routes: Routes = [
   {
     path: "",
@@ -32,12 +35,23 @@ const routes: Routes = [
   {
     path: "fpagamentos",
     component: FormaPagamentoCrudComponent
-  }
+  },
+  {
+    path: "fpagamentos/create",
+    component: FormaPagamentoCreateComponent
+  },
+  {
+    path: "fpagamentos/delete/:fpgId",  
+    component: FormaPagamentoDeleteComponent
+  },
+  {
+    path: "fpagamentos/update/:fpgId",
+    component: FormaPagamentoUpdateComponent
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-
 export class AppRoutingModule { }
