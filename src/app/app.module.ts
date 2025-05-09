@@ -41,6 +41,8 @@ import { FormaPagamentoCrudComponent } from './views/forma-pagamento-crud/forma-
 import { FormaPagamentoCreateComponent } from './components/formaPagamento/forma-pagamento-create/forma-pagamento-create.component';
 import { FormaPagamentoDeleteComponent } from './components/formaPagamento/forma-pagamento-delete/forma-pagamento-delete.component';
 import { FormaPagamentoUpdateComponent } from './components/formaPagamento/forma-pagamento-update/forma-pagamento-update.component';
+import { FornecedorCrudComponent } from './views/fornecedor-crud/fornecedor-crud.component';
+import { FornecedorCreateComponent } from './componets/fornecedor/fornecedor-create/fornecedor-create.component';
 
 registerLocaleData(localePt)
 
@@ -61,7 +63,9 @@ registerLocaleData(localePt)
     FormaPagamentoCrudComponent,
     FormaPagamentoCreateComponent,
     FormaPagamentoDeleteComponent,
-    FormaPagamentoUpdateComponent
+    FormaPagamentoUpdateComponent,
+    FornecedorCrudComponent,
+    FornecedorCreateComponent
   ],
   imports: [
     BrowserModule,
